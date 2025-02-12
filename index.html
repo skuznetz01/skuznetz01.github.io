@@ -30,33 +30,36 @@
     </script>
 
     <style>
-        /* CSS to position the banner at the bottom and overlay it */
+        /* CSS to position the banner overlay */
         #telegram-banner-container {
-            position: fixed; /* Fixed position */
+            position: fixed; /* Fixed position to overlay */
             bottom: 0; /* Align to the bottom */
             left: 0; /* Align to the left */
-            width: 100%; /* Full width */
-            z-index: 9999; /* High z-index to overlay other content */
+            right: 0; /* Align to the right for full width */
+            z-index: 9999; /* High z-index to overlay all content */
             background-color: rgba(255, 255, 255, 0.9); /* Optional: semi-transparent background */
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Optional: shadow for better visibility */
+            padding: 10px; /* Optional padding */
+            text-align: center; /* Optional text alignment */
         }
     </style>
 </head> 
 
 <body>
+
     <script>
-        if (location.protocol.substr(0, 4) === "file") {
-            alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
-        }
+    if (location.protocol.substr(0, 4) === "file") {
+        alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+    }
     </script>
-    
+        
     <noscript>
         <div id="notSupportedWrap">
             <h2 id="notSupportedTitle">This content requires JavaScript</h2>
             <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
         </div>
     </noscript>
-    
+
     <script src="scripts/modernjscheck.js"></script>
     <script src="scripts/supportcheck.js"></script>
     <script src="scripts/offlineclient.js" type="module"></script>
@@ -65,5 +68,6 @@
 
     <!-- Banner Container -->
     <div id="telegram-banner-container"></div>
+
 </body> 
 </html>
