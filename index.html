@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Показ рекламы в Telegram</title>
-    
+
     <!-- Подключение скрипта Telegram Web App -->
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    
+
     <!-- Подключение библиотеки TelegramAdsController -->
     <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-    
+
     <script>
         // Инициализация контроллера TelegramAdsController
         window.TelegramAdsController = new TelegramAdsController();
         window.TelegramAdsController.initialize({
-            pubId: "958913",  // Замените на ваш уникальный идентфокатор издателя
+            pubId: "958913",  // Замените на ваш уникальный идентификатор издателя
             appId: "1422",    // Замените на ваш идентификатор приложения
             debug: true        // Включение режима отладки (необязательно)
         });
@@ -25,12 +25,12 @@
             const button = document.getElementById('ad-button');
             button?.addEventListener('click', () => {
                 window.TelegramAdsController.triggerInterstitialBanner(true)
-                .then((result) => {
-                    console.log(result); // Логирование результата
-                })
-                .catch((error) => {
-                    console.log(error); // Логирование ошибки
-                });
+                    .then((result) => {
+                        console.log(result); // Логирование результата
+                    })
+                    .catch((error) => {
+                        console.log(error); // Логирование ошибки
+                    });
             });
         }
 
@@ -40,6 +40,6 @@
 </head>
 <body>
     <h1>Пример страницы для показа рекламы Telegram</h1>
-    <button id="ad-button">Показать рекламу</button>
+    <button id="ad-button">Реклама</button>
 </body>
 </html>
