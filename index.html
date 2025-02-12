@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
+    <script>
+        window.TelegramAdsController = new TelegramAdsController();
+        window.TelegramAdsController.initialize({
+            pubId: "958913",
+            appId: "1421",
+        });
     <meta charset="UTF-8">
     <title>CubeSmash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -31,14 +39,7 @@
         }
     </style>
 
-    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-    <script>
-        window.TelegramAdsController = new TelegramAdsController();
-        window.TelegramAdsController.initialize({
-            pubId: "958913",
-            appId: "1421",
-        });
+   
 
         // Показываем рекламу через 3 секунды
         document.addEventListener("DOMContentLoaded", function() {
