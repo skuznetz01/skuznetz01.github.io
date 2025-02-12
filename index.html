@@ -18,7 +18,7 @@
 
     <!-- Telegram Web App Script -->
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    
+
     <!-- Telegram Ads Controller Script -->
     <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
     <script>
@@ -28,13 +28,26 @@
             appId: "1422"    // Replace with your actual appId
         });
     </script>
+
+    <style>
+        /* CSS to position the banner at the bottom and overlay it */
+        #telegram-banner-container {
+            position: fixed; /* Fixed position */
+            bottom: 0; /* Align to the bottom */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            z-index: 9999; /* High z-index to overlay other content */
+            background-color: rgba(255, 255, 255, 0.9); /* Optional: semi-transparent background */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Optional: shadow for better visibility */
+        }
+    </style>
 </head> 
 
 <body>
     <script>
-    if (location.protocol.substr(0, 4) === "file") {
-        alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
-    }
+        if (location.protocol.substr(0, 4) === "file") {
+            alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+        }
     </script>
     
     <noscript>
