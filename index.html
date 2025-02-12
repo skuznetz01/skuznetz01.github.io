@@ -17,22 +17,20 @@
         window.TelegramAdsController.initialize({
             pubId: "958913",  // Замените на ваш уникальный идентификатор издателя
             appId: "1422",    // Замените на ваш идентификатор приложения
-            debug: true       // Отключение режима отладки
+            debug: false        // Включение режима отладки (необязательно)
         });
 
         // Функция для показа рекламы при клике на кнопку
         function showAd() {
             const button = document.getElementById('ad-button');
             button?.addEventListener('click', () => {
-                setTimeout(() => {
-                    window.TelegramAdsController.triggerInterstitialBanner(true) // Передаем true для немедленного показа
-                        .then((result) => {
-                            console.log(result); // Логирование результата
-                        })
-                        .catch((error) => {
-                            console.log(error); // Логирование ошибки
-                        });
-                }, 3000); // Задержка 3 секунды
+                window.TelegramAdsController.triggerInterstitialBanner(true) // Передаем true для немедленного показа
+                    .then((result) => {
+                        console.log(result); // Логирование результата
+                    })
+                    .catch((error) => {
+                        console.log(error); // Логирование ошибки
+                    });
             });
         }
 
