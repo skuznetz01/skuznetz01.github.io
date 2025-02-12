@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-    <script>
-        window.TelegramAdsController = new TelegramAdsController();
-        window.TelegramAdsController.initialize({
-            pubId: "958913",
-            appId: "1421",
-        });
     <meta charset="UTF-8">
     <title>CubeSmash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
     <!-- Made with Construct, the game and app creator :: https://www.construct.net -->
     <meta name="generator" content="Scirra Construct">
-
     <link rel="manifest" href="appmanifest.json">
     <link rel="apple-touch-icon" sizes="128x128" href="icons/icon_128.png">
     <link rel="apple-touch-icon" sizes="256x256" href="icons/icon_256.png">
     <link rel="apple-touch-icon" sizes="512x512" href="icons/icon_512.png">
     <link rel="icon" type="image/png" href="icons/icon_512.png">
-
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -39,13 +29,18 @@
         }
     </style>
 
-   
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
+    <script>
+        window.TelegramAdsController = new TelegramAdsController();
+        window.TelegramAdsController.initialize({
+            pubId: "958913",
+            appId: "1421",
+        });
 
-        // Показываем рекламу через 3 секунды
+        // Показываем рекламу сразу при загрузке
         document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                document.getElementById("adContainer").style.display = "block";
-            }, 3000);
+            document.getElementById("adContainer").style.display = "block";
         });
     </script>
 </head>
