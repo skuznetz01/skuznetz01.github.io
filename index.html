@@ -24,7 +24,7 @@
         function showAd() {
             const button = document.getElementById('ad-button');
             button?.addEventListener('click', () => {
-                window.TelegramAdsController.triggerInterstitialBanner(true) // Передаем true для немедленного показа
+                window.TelegramAdsController.triggerInterstitialBanner(false) // Передаем true для немедленного показа
                     .then((result) => {
                         console.log(result); // Логирование результата
                     })
