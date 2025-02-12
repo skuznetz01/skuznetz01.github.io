@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>CubeSmash</title>
@@ -30,7 +30,24 @@
             display: none; /* Скрыть контейнер по умолчанию */
         }
     </style>
-</head> 
+
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
+    <script>
+        window.TelegramAdsController = new TelegramAdsController();
+        window.TelegramAdsController.initialize({
+            pubId: "958913",
+            appId: "1421",
+        });
+
+        // Показываем рекламу через 3 секунды
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("adContainer").style.display = "block";
+            }, 3000);
+        });
+    </script>
+</head>
 
 <body>
     <script>
@@ -38,14 +55,13 @@
             alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
         }
     </script>
-    
+
     <noscript>
         <div id="notSupportedWrap">
             <h2 id="notSupportedTitle">This content requires JavaScript</h2>
             <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
         </div>
     </noscript>
-    
     <script src="scripts/modernjscheck.js"></script>
     <script src="scripts/supportcheck.js"></script>
     <script src="scripts/offlineclient.js" type="module"></script>
@@ -54,23 +70,7 @@
 
     <!-- Контейнер для рекламы -->
     <div id="adContainer">
-        <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-        <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-        <script>
-            window.TelegramAdsController = new TelegramAdsController();
-            window.TelegramAdsController.initialize({
-                pubId: "958913",
-                appId: "1421",
-            });
-        </script>
-        <p>Реклама</p> <!-- Здесь можно добавить текст или изображение рекламы -->
+        <!-- Здесь можно добавить контент рекламы, например, изображение или другую информацию -->
     </div>
-
-    <script>
-        // Показать рекламу через 3 секунды
-        setTimeout(function() {
-            document.getElementById("adContainer").style.display = "block";
-        }, 3000);
-    </script>
-</body> 
+</body>
 </html>
