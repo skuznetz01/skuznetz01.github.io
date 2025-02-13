@@ -13,12 +13,17 @@
             appId: "1422",
         });
 
+        // Функция для показа рекламы
         function showAds() {
-            // Здесь можно добавить код для показа рекламы
             console.log("Показ рекламы");
-            // Например, вызов метода TelegramAdsController для показа рекламы
+            // Здесь можно вызвать метод TelegramAdsController для показа рекламы
             // window.TelegramAdsController.showAd();
         }
+
+        // Автоматический показ рекламы при загрузке страницы
+        window.onload = function() {
+            showAds();
+        };
     </script>
 </head>
 <body>
