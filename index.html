@@ -18,6 +18,31 @@
 
     <!-- Добавьте скрипт Telegram Web App -->
     <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
+
+    <!-- Инициализация рекламы Telegram -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.TelegramAdsController = new TelegramAdsController();
+            window.TelegramAdsController.initialize({
+                pubId: "958913",
+                appId: "1422",
+            });
+        });
+    </script>
+
+    <!-- Стили для позиционирования рекламы -->
+    <style>
+        #telegram-ad {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Убедитесь, что реклама поверх других элементов */
+            background-color: #fff; /* Цвет фона, если нужен */
+            text-align: center; /* Центрирование содержимого */
+            padding: 10px; /* Отступы */
+        }
+    </style>
 </head>
  
 <body>
@@ -40,29 +65,6 @@
     <script src="scripts/offlineclient.js" type="module"></script>
     <script src="scripts/main.js" type="module"></script>
     <script src="scripts/register-sw.js" type="module"></script>
-
-    <!-- Инициализация рекламы Telegram -->
-    <script>
-        window.TelegramAdsController = new TelegramAdsController();
-        window.TelegramAdsController.initialize({
-            pubId: "958913",
-            appId: "1422",
-        });
-    </script>
-
-    <!-- Стили для позиционирования рекламы -->
-    <style>
-        #telegram-ad {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Убедитесь, что реклама поверх других элементов */
-            background-color: #fff; /* Цвет фона, если нужен */
-            text-align: center; /* Центрирование содержимого */
-            padding: 10px; /* Отступы */
-        }
-    </style>
 
     <!-- Контейнер для рекламы -->
     <div id="telegram-ad">
