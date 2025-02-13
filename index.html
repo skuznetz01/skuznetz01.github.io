@@ -18,7 +18,22 @@
             padding: 10px; / Padding for the ad /
             z-index: 1000; / Ensure it is on top of other elements /
         }
-    </style>
+
+        / Centering styles /
+        #play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            background-color: #4CAF50; / Green background /
+            color: white; / White text /
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+</style>
     <script>
         window.onload = function() {
             // Initialize Telegram Ads Controller
