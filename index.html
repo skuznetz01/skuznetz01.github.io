@@ -5,21 +5,9 @@
     <title>CubeSmash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     
-    <!-- Made with Construct, the game and app creator :: https://www.construct.net -->
-    <meta name="generator" content="Scirra Construct">
-
-    <link rel="manifest" href="appmanifest.json">
-    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon_128.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="icons/icon_256.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="icons/icon_512.png">
-    <link rel="icon" type="image/png" href="icons/icon_512.png">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Добавьте скрипт Telegram Web App -->
+    <!-- Telegram scripts -->
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
     <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-
-    <!-- Инициализация рекламы Telegram -->
     <script>
         window.TelegramAdsController = new TelegramAdsController();
         window.TelegramAdsController.initialize({
@@ -28,46 +16,53 @@
         });
     </script>
 
-    <!-- Стили для позиционирования рекламы -->
+    <!-- Остальные мета-теги и стили -->
+    <link rel="manifest" href="appmanifest.json">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon_128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/icon_256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/icon_512.png">
+    <link rel="icon" type="image/png" href="icons/icon_512.png">
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        #telegram-ad {
+        /* Стили для баннера */
+        #banner-container {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            z-index: 1000; /* Убедитесь, что реклама поверх других элементов */
-            background-color: #fff; /* Цвет фона, если нужен */
-            text-align: center; /* Центрирование содержимого */
-            padding: 10px; /* Отступы */
+            background: #333333;
+            z-index: 1000;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
- 
-<body>
 
-    <script>
-    if (location.protocol.substr(0, 4) === "file")
-    {
-        alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
-    }
-    </script>
-    
+<body>
+    <!-- Контейнер для баннера -->
+    <div id="banner-container">
+        <!-- Здесь будет отображаться баннер -->
+    </div>
+
     <noscript>
         <div id="notSupportedWrap">
             <h2 id="notSupportedTitle">This content requires JavaScript</h2>
             <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
         </div>
     </noscript>
+
+    <!-- Остальные скрипты -->
     <script src="scripts/modernjscheck.js"></script>
     <script src="scripts/supportcheck.js"></script>
     <script src="scripts/offlineclient.js" type="module"></script>
     <script src="scripts/main.js" type="module"></script>
     <script src="scripts/register-sw.js" type="module"></script>
 
-    <!-- Контейнер для рекламы -->
-    <div id="telegram-ad">
-        <!-- Здесь будет отображаться реклама -->
-    </div>
-
+    <script>
+        if (location.protocol.substr(0, 4) === "file") {
+            alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+        }
+    </script>
 </body>
 </html>
